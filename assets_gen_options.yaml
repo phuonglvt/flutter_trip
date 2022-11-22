@@ -1,0 +1,7 @@
+output: src/utils/app_assets.dart
+class_name: AppAssets
+enable: true
+gen_package_path: false
+ignore_resolution: false
+omit_path_levels: 2
+exclude:

@@ -1,0 +1,5 @@
+#include? "Debug.xcconfig"
+#include? "Release.xcconfig"
+
+BUNDLE_SUFFIX=.dev
+APP_SUFFIX=-dev

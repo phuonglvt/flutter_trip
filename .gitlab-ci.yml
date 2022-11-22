@@ -1,0 +1,36 @@
+image: cirrusci/flutter:3.0.0
+
+stages:
+  - build
+  - analyze
+  - test
+
+cache:
+  paths:
+    - .pub-cache
+  key: ${CI_COMMIT_REF_NAME}_pub-cache
+
+before_script:
+  - flutter pub get
+  - flutter clean
+
+build:
+  stage: build
+  script:
+    - flutter build apk --flavor dev --dart-define=FLAVOR="dev"
+  only:
+    - merge_requests
+
+analyze:
+  stage: analyze
+  script:
+    - flutter analyze
+  only:
+    - merge_requests
+
+#unit_test:
+#  stage: test
+#  script:
+#    - flutter test
+#  only:
+#    - merge_requests

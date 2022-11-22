@@ -1,0 +1,13 @@
+1 số thay đổi so với trước (vẫn giữ nguyên mô hình MVVM):
+- Sử dụng thư viện GetX https://pub.dev/packages/get:
+	+ Điều hướng thay thế cho navigation mặc định, ko phụ thuộc vào context.
+	+ Khai báo đa ngôn ngữ thay thế mặc định
+	+ Thay thế RxDart
+	+ Thay thế FlutterToast, Dialog, SnarkBar mà ko cần phụ thuộc vào context
+	+ Thay thế get_id để xử lý tiêm phụ thuộc
+- Hive https://pub.dev/packages/hive: thay thế shared_preferences (nhanh, khi get ko cần chờ await)
+- Thay thế moor với Floor. Model của Floor có thể dùng chung với Retrofit. (https://pub.dev/packages/floor)
+- Sử dụng thư viện assets_gen để gem tự động các file asset như image, font để sử dụng. (nhược điểm ở window: cần replace \ thành /)
+- Sử dụng thư viện flutter_launcher_icons để create app icon tự động cho android/ios từ 1 ảnh được chỉ định.
+- Viết lại lớp logger với thư viện fimber để show error hay information dễ nhìn và cụ thể hơn.
+- Dùng catcher để gửi log lỗi app đến Slack trong quá trình phát triển
